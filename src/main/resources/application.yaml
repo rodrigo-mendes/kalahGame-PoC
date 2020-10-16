@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  http2:
+    enabled: true
+
+spring:
+  application:
+    name: "Kalah Game"
+  aop:
+    auto: false
+  resources:
+    cache:
+      period: 31536000
+      cachecontrol:
+        max-age: 31536000
+    chain:
+      html-application-cache: true
+      enabled: true
+      strategy:
+        content:
+          enabled: true
+          paths: /webjars/swagger-ui/**.*
+
+springdoc:
+  version: 1.0.0
+  swagger-ui:
+    path: /swagger-ui.html
